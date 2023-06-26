@@ -1,0 +1,8 @@
+version: 2.0.0
+files:
+  - url: my-new-app-Setup-2.0.0.exe
+    sha512: a/4Pqs+m8bnZVj2d9zBpZ+xOwM8DVI7K7zkYeQrV9AjLcZBTq3JBMVFJk/oc8lI/m4S3vaG207oQvgukce+7dQ==
+    size: 352353805
+path: my-new-app-Setup-2.0.0.exe
+sha512: a/4Pqs+m8bnZVj2d9zBpZ+xOwM8DVI7K7zkYeQrV9AjLcZBTq3JBMVFJk/oc8lI/m4S3vaG207oQvgukce+7dQ==
+releaseDate: '2023-06-24T14:47:11.268Z'
