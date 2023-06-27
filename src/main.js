@@ -15,7 +15,7 @@ autoUpdater.forceDevUpdateConfig = true;
 const repo = "Shaukat456/ElectronAPP";
 const token = "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";
 
-autoUpdater.setFeedURL(`https://api.github.com/repos/${repo}/releases`, {
+autoUpdater.setFeedURL(`https://api.github.com/repos/${repo}/dist`, {
   headers: {
     Authorization: `Bearer ${token}`,
   },
