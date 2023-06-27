@@ -2,6 +2,14 @@ const { app, BrowserWindow, ipcMain, ipcRenderer } = require("electron");
 const { autoUpdater } = require("electron-updater");
 const path = require("path");
 
+let electron_server = require("update-electron-app")({
+  repo: "shaukat456/ElectronApp2",
+  updateInterval: "5 minutes",
+  logger: require("electron-log"),
+});
+
+console.log({ electron_server });
+
 // autoUpdater.setFeedURL("https://github.com/Shaukat456/ElectronAPP.git");
 // autoUpdater.downloadUpdate().then((res) => res.map());
 
@@ -12,26 +20,62 @@ const path = require("path");
 //   .then((res) => console.log({ res }))
 //   .catch((error) => console.log({ error }));
 autoUpdater.forceDevUpdateConfig = true;
-const repo = "Shaukat456/ElectronAPP";
-const token = "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";
 
-autoUpdater.setFeedURL(`https://api.github.com/repos/${repo}/dist`, {
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-});
+const repo = "Shaukat456/ElectronAPP2";
+const token = "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";
+
+// fetch(`https://api.github.com/repos/shaukat456/ElectronApp2/releases/latest`, {
+//   headers: {
+//     Authorization: "Bearer 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",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     // Process the data
+
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     // Handle any errors
+//     console.error({ error });
+//   });
+
+// fetch(` https://api.github.com/repos/Shaukat456/ElectronAPP2/zipball/v1.0.4`, {
+//   headers: {
+//     Authorization: "Bearer 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",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     // Process the data
+
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     // Handle any errors
+//     console.error({ error });
+//   });
+
+// autoUpdater.setFeedURL(
+//   `https://api.github.com/repos/${repo}/releases/109781143`,
+//   {
+//     headers: {
+//       Authorization: `Bearer ${token}`,
+//     },
+//   }
+// );
+// autoUpdater
+//   .checkForUpdates()
+//   .then((res) => {
+//     console.log({ res });
+//   })
+//   .catch((err) => console.log({ err }));
+
 // autoUpdater.setFeedURL(`https://github.com/Shaukat456/ElectronAPP.git`, {
 //   headers: {
 //     Authorization: `Bearer ${token}`,
 //   },
 // });
-
-autoUpdater
-  .checkForUpdates()
-  .then((res) => {
-    console.log({ res });
-  })
-  .catch((err) => console.log({ err }));
 
 // console.log({ latestVersion });
 // autoUpdater.on("update-available", () => {
@@ -99,6 +143,21 @@ const createWindow = () => {
 // Some APIs can only be used after this event occurs.
 // app.on("ready", createWindow)
 
+app.whenReady().then(() => {
+  autoUpdater.setFeedURL(`https://api.github.com/repos/${repo}/releases/dis`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  autoUpdater
+    .checkForUpdates()
+    .then((res) => {
+      console.log({ res });
+    })
+    .catch((err) => console.log({ err }));
+
+  createWindow();
+});
 app.whenReady().then(() => {
   createWindow();
 });
