@@ -1,8 +1,8 @@
 version: 2.0.4
 files:
-  - url: my-new-app-setup-2.0.4.exe
-    sha512: 4dnk+fjmr7sOQSlAr8rlTgtjg9mcu0/lQRAXclM0wNKQOzXVtiXaYVaspAC9MVM1Sf3Asgm13ucKqRZQdDg9wA==
-    size: 74699056
-path: my-new-app-setup-2.0.4.exe
-sha512: 4dnk+fjmr7sOQSlAr8rlTgtjg9mcu0/lQRAXclM0wNKQOzXVtiXaYVaspAC9MVM1Sf3Asgm13ucKqRZQdDg9wA==
-releaseDate: '2023-07-04T13:00:53.260Z'
+  - url: my-new-app-Setup-2.0.4.exe
+    sha512: ZkFG7uy1n2odyelazIkqOJU7c+iS2ratcclAldvtd+ad5bBM1Q1ShkIvUWpcP/zfHhEfqX9I87O4mOLDYupx3A==
+    size: 74751244
+path: my-new-app-Setup-2.0.4.exe
+sha512: ZkFG7uy1n2odyelazIkqOJU7c+iS2ratcclAldvtd+ad5bBM1Q1ShkIvUWpcP/zfHhEfqX9I87O4mOLDYupx3A==
+releaseDate: '2023-07-04T13:29:37.247Z'
