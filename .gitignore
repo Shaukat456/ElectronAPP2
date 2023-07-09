@@ -101,3 +101,5 @@ typings/
 
 # Electron-Forge
 resources/
+out
+dist
